@@ -26,7 +26,8 @@ function App() {
 	const connectionRef= useRef()
 
 	useEffect(() => {
-		navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then((stream) => {
+		//navigator.mediaDevices.getUserMedia
+		navigator.mediaDevices.getDisplayMedia({ video: true, audio: true }).then((stream) => {
 			setStream(stream)
 				myVideo.current.srcObject = stream
 		})
